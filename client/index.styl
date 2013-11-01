@@ -1,10 +1,33 @@
 body
   text-align center
+  font-family: sans
+
+header h1
+  font-size 220%
 
 input[type=text]
-  border: 1px solid #ccc
+  border 1px solid #ccc
   &:hover
-    border: 1px solid #458
-  padding: 1ex
+    border 1px solid #458
+  padding 1ex
 
+table
+  margin auto
+  border-collapse collapse
+  td
+  th
+    border 1px solid #444
+    padding 1ex
+  td
+    text-align right
+  th
+    text-align left
+  tr:nth-child(odd)
+    background-color: #fed
+  tr:nth-child(even)
+    background-color: #ffd
+
+.help
+  font-size: 90%
+  color #888
 

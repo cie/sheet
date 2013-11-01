@@ -1,17 +1,32 @@
 <body>
+  {{>header}}
   {{>sheet}}
 </body>
 
+<template name="header">
+<header>
+<h1>Sheet</h1>
+</header>
+</template>
+
 <template name="sheet">
   <article id="worksheet">
-    {{#each cells}}
-      {{>cell}}
-    {{else}}
-    {{/each}}
+    <table>
+      {{#each cells}}
+        {{>cell}}
+      {{else}}
+      {{/each}}
+    </table>
   </article>
-  <input type="text" name="cmdline" id="cmdline">
+  <p>
+    <input type="text" name="cmdline" id="cmdline">
+  </p>
+  <p class="help">
+    Try expressions like a=5, b=a^2, a=10. No checks for infinite recursions!
+  </p>
+
 </template>
 
 <template name="cell">
-  {{label}} = {{value}}
+  <tr><th>{{label}}</td><td>{{value}}</td></tr>
 </template>
