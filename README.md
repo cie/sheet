@@ -1,4 +1,6 @@
-# Intro
+# Sheet
+
+## Introduction
 
 This is work in progress.
 
@@ -6,11 +8,11 @@ Sheet will be a tool for mathematical calculations. Something like Excel, but wi
 
 See [sheet.meteor.com](http://sheet.meteor.com/) for a demo.
 
-# Contribution
+## Contribution
 
 Any ideas are welcome in the [Issue tracker](https://github.com/cie/sheet/issues)!
 
-# Licence
+## Licence
 
 The MIT License (MIT)
 
