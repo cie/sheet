@@ -9,8 +9,8 @@
 %%
 
 \s+                   /* skip whitespace */
-[a-zA-Z][a-zA-Z]*\b   return 'IDENTIFIER'
 [0-9]+("."[0-9]+)?\b  return 'NUMBER'
+[a-zA-Z][a-zA-Z]*\b   return 'IDENTIFIER'
 "*"                   return '*'
 "/"                   return '/'
 "-"                   return '-'

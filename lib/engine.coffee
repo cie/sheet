@@ -1,15 +1,21 @@
 defaultLabel = "result"
+
+
 @Sheet =
   execute: (str) ->
-    items = str.split("=")
-    m = /^(\s*([a-zA-Z][a-zA-Z]*)\s*=)?(.*)$/.exec str
-    return if not m
+    try
+      parser.yy.parseError = (error) -> alert(error)
+      items = str.split("=")
+      m = /^(\s*([a-zA-Z][a-zA-Z]*)\s*=)?(.*)$/.exec str
+      throw "Please use <expr> or <var>=<expr> syntax." unless m
 
-    label = if m[1] then m[2] else defaultLabel
-    formula = m[3]
+      label = if m[1] then m[2] else defaultLabel
+      formula = m[3]
 
-    parser.parse(formula) # just to test
-    SetFormula label, formula
+      parser.parse(formula) # just to test
+      SetFormula label, formula
+    catch error
+      alert(error)
 
 @SetFormula = (label, formula) ->
   Session.set "cell-#{label}", formula
@@ -19,6 +25,10 @@ defaultLabel = "result"
     Session.set "cells", cells
 
 @GetFormulaResult = (label) ->
-  console.log "result", label
-  parser.parse Session.get "cell-#{label}"
+  formula = Session.get("cell-#{label}")
+  if not formula
+    throw "Undefined variable #{label}"
+  result = parser.parse Session.get("cell-#{label}")
+  console.log result
+  result
 
