@@ -9,6 +9,7 @@
 %%
 
 \s+                   /* skip whitespace */
+[a-zA-Z][a-zA-Z]*\b   return 'IDENTIFIER'
 [0-9]+("."[0-9]+)?\b  return 'NUMBER'
 "*"                   return '*'
 "/"                   return '/'
@@ -17,6 +18,7 @@
 "^"                   return '^'
 "("                   return '('
 ")"                   return ')'
+"="                   return '='
 <<EOF>>               return 'EOF'
 .                     return 'INVALID'
 
@@ -35,7 +37,7 @@
 
 expressions
     : e EOF
-        {return $1;}
+        { return $1; }
     ;
 
 e
@@ -55,5 +57,7 @@ e
         {$$ = $2;}
     | NUMBER
         {$$ = Number(yytext);}
+    | IDENTIFIER
+        {$$ = GetFormulaResult(yytext);}
     ;
 

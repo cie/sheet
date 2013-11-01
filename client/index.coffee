@@ -15,8 +15,7 @@ Template.cell.helpers
   label: ->
     @
   value: ->
-    Session.get("cell-#{@}")
-    Formulas[@]()
+    parser.parse Session.get("cell-#{@}")
 
 Template.sheet.rendered = ->
   $("#cmdline").focus()
