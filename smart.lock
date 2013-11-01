@@ -1,0 +1,31 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "collection2": {},
+      "minimongoid": {}
+    },
+    "packages": {
+      "collection2": {
+        "git": "https://github.com/aldeed/meteor-collection2.git",
+        "tag": "v0.2.11",
+        "commit": "34ea61718c8826dfa9236222cec6c097bd41ae6b"
+      },
+      "minimongoid": {
+        "git": "https://github.com/Exygy/minimongoid.git",
+        "tag": "v0.8.2",
+        "commit": "8acb3fb9479dbade0da3f62c370123502f08af95"
+      },
+      "simple-schema": {
+        "git": "https://github.com/aldeed/meteor-simple-schema.git",
+        "tag": "v0.2.13",
+        "commit": "fe7950ad64ebeadec9bc2e17fc7a335aae4bc7fc"
+      },
+      "underscore-string-latest": {
+        "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
+        "tag": "v2.3.3",
+        "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
+      }
+    }
+  }
+}

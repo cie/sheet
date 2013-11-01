@@ -1,0 +1,17 @@
+<body>
+  {{>sheet}}
+</body>
+
+<template name="sheet">
+  <article id="worksheet">
+    {{#each cells}}
+      {{>cell}}
+    {{else}}
+    {{/each}}
+  </article>
+  <input type="text" name="cmdline" id="cmdline">
+</template>
+
+<template name="cell">
+  {{label}} = {{value}}
+</template>

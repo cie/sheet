@@ -7,3 +7,5 @@ standard-app-packages
 preserve-inputs
 coffeescript
 stylus
+collection2
+minimongoid
