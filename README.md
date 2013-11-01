@@ -2,13 +2,9 @@
 
 Sheet will be a tool for mathematical calculations. Something like Excel, but with finitely many cells.
 
-It's in pre-alpha stage.
+It's in pre-alpha (exploration) stage.
 
-See [sheet.meteor.com](http://sheet.meteor.com/) for a demo.
-
-## Contribution
-
-Any ideas are welcome in the [Issue tracker](https://github.com/cie/sheet/issues)!
+See the [demo](http://sheet.meteor.com/) and share your thoughts in the [Issue tracker](https://github.com/cie/sheet/issues). Thanks!
 
 ## Licence
 
