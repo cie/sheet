@@ -1,10 +1,8 @@
 # Sheet
 
-## Introduction
-
-This is work in progress.
-
 Sheet will be a tool for mathematical calculations. Something like Excel, but with finitely many cells.
+
+It's in pre-alpha stage.
 
 See [sheet.meteor.com](http://sheet.meteor.com/) for a demo.
 
