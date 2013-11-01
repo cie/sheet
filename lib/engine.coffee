@@ -29,6 +29,5 @@ defaultLabel = "result"
   if not formula
     throw "Undefined variable #{label}"
   result = parser.parse Session.get("cell-#{label}")
-  console.log result
   result
 
