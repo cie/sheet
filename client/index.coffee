@@ -15,7 +15,7 @@ Template.cell.helpers
   label: ->
     @label
   value: ->
-    parser.parse Session.get("cell-#{@label}")
+    parse Session.get("cell-#{@label}")
   even: (index) ->
     console.log index
     if index % 2 is 0 then "even" else "odd"
